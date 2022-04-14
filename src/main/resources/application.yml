@@ -1,13 +1,24 @@
 server.port: 8081
 
 spring:
-  h2:
-    console:
-      enabled: 'true'
+  config:
+    import: optional:file:env.properties
   datasource:
-    username: sa
-    url: jdbc:h2:mem:academia
-    driverClassName: org.h2.Driver
-    password: password
+    driver-class-name: org.postgresql.Driver
+    url: ${DATABASE_URL}
+    platform: postgres
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate.format_sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+
+logging:
+  level:
+    org:
+      hibernate:
+        type: trace

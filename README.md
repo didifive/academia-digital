@@ -33,10 +33,10 @@ Link da base utilizada neste projeto: [cami-la/academia-digital].
 
 Abaixo seguem modificações feitas em relação ao projeto base:
 
-* Utilizando o PostgreSQL em nuvem através do [ElephantSQL] e apenas para produção ([Heroku]);
+* Utilizando o PostgreSQL em nuvem por [ElephantSQL];
 * Criação de variável de ambiente para manter em segredo a URL de conexão ao banco;
-* Adicionado arquivo `.env.sample` com exemplo de como utilizar a variável de ambiente;
-* Adicionado o banco H2 para trabalhar localmente;
+* Adicionado arquivo `.env.properties.sample` com exemplo para configurar a variável de ambiente `DATABASE_URL`;
+* Adicionado o banco H2 para utilizar em testes;
 * 
 
 ---
