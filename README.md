@@ -41,7 +41,7 @@ Abaixo seguem modificações feitas em relação ao projeto base:
 
 ---
 
-Link do projeto disponível online no [Heroku]: []()  
+Link do projeto disponível online no [Heroku]: [academia-digital.herokuapp.com](https://academia-digital.herokuapp.com/api/v1/alunos)  
 _Observação: Quando o projeto fica sem receber requisições por um tempo, automaticamente o Heroku coloca ele em modo dormir (sleepy), portanto caso ocorra erro de timeout, basta tentar novamente que deve estar ativo._
 
 ---
