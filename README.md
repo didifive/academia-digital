@@ -37,7 +37,7 @@ Abaixo seguem modificações feitas em relação ao projeto base:
 * Criação de variável de ambiente para manter em segredo a URL de conexão ao banco;
 * Adicionado arquivo `.env.properties.sample` com exemplo para configurar a variável de ambiente `DATABASE_URL`;
 * Adicionado o banco H2 para utilizar em testes;
-* 
+* Adicionado teste para Controller com JUnit5 e Mockito.
 
 ---
 

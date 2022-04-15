@@ -37,14 +37,13 @@ public class AlunoServiceImpl implements IAlunoService {
 
   @Override
   public List<Aluno> getAll(String dataDeNascimento) {
+    LocalDate localDate = LocalDate.parse(dataDeNascimento, JavaTimeUtils.LOCAL_DATE_FORMATTER);
+    return repository.findByDataDeNascimento(localDate);
+  }
 
-    if(dataDeNascimento == null) {
-      return repository.findAll();
-    } else {
-      LocalDate localDate = LocalDate.parse(dataDeNascimento, JavaTimeUtils.LOCAL_DATE_FORMATTER);
-      return repository.findByDataDeNascimento(localDate);
-    }
-
+  @Override
+  public List<Aluno> getAll() {
+    return repository.findAll();
   }
 
   @Override
@@ -58,11 +57,8 @@ public class AlunoServiceImpl implements IAlunoService {
 
   @Override
   public List<AvaliacaoFisica> getAllAvaliacaoFisicaId(Long id) {
-
     Aluno aluno = repository.findById(id).get();
-
     return aluno.getAvaliacoes();
-
   }
 
 }

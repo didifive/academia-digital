@@ -10,7 +10,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/matriculas")
+@RequestMapping("/api/v1/matriculas")
 public class MatriculaController {
 
   @Autowired
